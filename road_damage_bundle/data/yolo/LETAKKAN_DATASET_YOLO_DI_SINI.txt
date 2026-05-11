@@ -6,5 +6,3 @@ Salin struktur dataset YOLO ke folder ini sehingga menjadi:
   data/yolo/labels/train/
   data/yolo/labels/val/
   data/yolo/labels/test/
-
-Folder ini sengaja kosong di paket upload (tanpa gambar/label).
