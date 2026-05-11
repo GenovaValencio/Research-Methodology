@@ -1,8 +1,0 @@
-Paket ini = satu folder siap di-zip / di-push ke GitHub (tanpa gambar dataset).
-
-Cara pakai:
-1. Salin folder images/ dan labels/ YOLO Anda ke: data/yolo/
-2. pip install -r requirements.txt
-3. python road_damage_train.py  (atau road_damage_train_retrain.py, dll.)
-
-Model hasil training akan muncul di runs/ (folder runs tidak ikut di paket awal; dibuat saat training).
