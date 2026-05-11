@@ -1,20 +1,10 @@
 ================================================================================
 LOKASI DATASET (di luar GitHub)
 ================================================================================
-
-Isi file ini dengan tautan unduhan dataset Anda, lalu commit file ini ke
-repository supaya pembaca clone tahu di mana mengambil data.
-
---------------------------------------------------------------------------------
 TAUTAN UNDUH DATASET (ganti baris di bawah):
 --------------------------------------------------------------------------------
 
-[TEMPATKAN_URL_ANDA_DI_SINI]
-
-Contoh format:
-  https://drive.google.com/file/d/.../view
-  atau link Kaggle / Zenodo / Hugging Face / server kampus.
-
+https://drive.google.com/drive/folders/19kzjgJQyuv7o86CLaQMNzdcYTF0msN5O?usp=drive_link
 --------------------------------------------------------------------------------
 SETELAH UNDUH
 --------------------------------------------------------------------------------
