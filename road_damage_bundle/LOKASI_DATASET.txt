@@ -1,0 +1,33 @@
+================================================================================
+LOKASI DATASET (di luar GitHub)
+================================================================================
+
+Isi file ini dengan tautan unduhan dataset Anda, lalu commit file ini ke
+repository supaya pembaca clone tahu di mana mengambil data.
+
+--------------------------------------------------------------------------------
+TAUTAN UNDUH DATASET (ganti baris di bawah):
+--------------------------------------------------------------------------------
+
+[TEMPATKAN_URL_ANDA_DI_SINI]
+
+Contoh format:
+  https://drive.google.com/file/d/.../view
+  atau link Kaggle / Zenodo / Hugging Face / server kampus.
+
+--------------------------------------------------------------------------------
+SETELAH UNDUH
+--------------------------------------------------------------------------------
+
+Ekstrak / salin sehingga pada project Anda terbentuk:
+
+  data/yolo/images/train/
+  data/yolo/images/val/
+  data/yolo/images/test/
+  data/yolo/labels/train/
+  data/yolo/labels/val/
+  data/yolo/labels/test/
+
+Rincian struktur: data/yolo/LETAKKAN_DATASET_YOLO_DI_SINI.txt
+
+================================================================================
