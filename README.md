@@ -50,6 +50,25 @@ Gambar dan label YOLO **tidak** ikut di repository ini. Tautan unduhan dan langk
 
 ---
 
+## Perbandingan: data dari **foto** vs **video**
+
+Keduanya pada akhirnya dipakai YOLO sebagai **gambar statis** (`images/*.jpg` + `labels/*.txt`). Bedanya ada di **cara Anda mendapatkan** gambar dan label itu.
+
+| Aspek | **Foto** (dataset gambar) | **Video** |
+|--------|---------------------------|-----------|
+| **Input utama** | File gambar (mis. JPG) per adegan; label `.txt` YOLO atau anotasi VOC/XML | File `.mp4` (alur `rgb` + `mask`, atau video tunggal untuk pseudo-label) |
+| **Cara dapat label** | Anotasi manual, dataset siap pakai, atau konversi VOC (`road_damage_prepare.py`) | Dari **mask video** → bbox (`pothole_video_mask_to_yolo.py`), atau dari **model YOLO** pada tiap frame (`pothole_video_add_to_yolo.py`) |
+| **Mutu label** | Biasanya paling terkontrol jika manual / dataset bersih | Mask → bbox cukup objektif untuk objek yang tertutup mask; pseudo-label YOLO bisa **salah** dan perlu threshold (`--conf`) |
+| **Variasi antar sampel** | Tiap foto sering adegan berbeda | Banyak frame dari **adegan mirip** berurutan → risiko **redundan**; mitigasi: sampling (`interval_seconds`, `--max_frames_per_video`) |
+| **Volume data** | Terbatas jumlah foto yang Anda anotasi / unduh | Satu video bisa menghasilkan **banyak** frame dengan cepat |
+| **Biaya / usaha** | Tinggi jika anotasi sendiri; rendah jika pakai dataset jadi | Rendah untuk generate frame; tetap perlu pengecekan / sampling agar training stabil |
+| **Skrip terkait** | `road_damage_prepare.py`, lalu `road_damage_train.py` / `road_damage_train_retrain.py` | `pothole_video_mask_to_yolo.py` dan/atau `pothole_video_add_to_yolo.py`, lalu training yang sama |
+| **Demo inferensi** | Unggah foto: `web_demo.py` | Aliran hidup / file video: `realtime_road_damage.py` (kamera atau URL stream), `video.py` |
+
+**Ringkas:** pakai **foto** bila Anda mengandalkan dataset berlabel rapi atau anotasi manual. Pakai **video** bila ingin menambah banyak contoh dari rekaman jalan, dengan label dari mask atau dari model (ingat koreksi sampling dan kualitas pseudo-label).
+
+---
+
 ## Yang sengaja tidak ada di GitHub
 
 Sesuai `.gitignore`, antara lain: isi `data/yolo/images/` dan `data/yolo/labels/`, `data/raw/`, folder `runs/`, berat model (`*.pt`, `*.onnx` besar), lingkungan virtual, ZIP dataset, snapshot. Itu muncul **hanya di mesin Anda** setelah training atau menyalin data.
