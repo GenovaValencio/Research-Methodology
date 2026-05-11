@@ -21,7 +21,6 @@ Gambar dan label YOLO **tidak** ikut di repository ini. Tautan unduhan dan langk
 | `data/yolo/LETAKKAN_DATASET_YOLO_DI_SINI.txt` | Pengingat struktur folder; folder gambar/label **tidak** ikut di repo |
 | `*.py` | Skrip utama proyek (training, demo web, kamera, utilitas video, pothole) |
 | `.vscode/` | Konfigurasi editor (opsional, jika ada) |
-| `MidExam_ResearchMethodology/` | Dokumen tugas / metodologi (jika disertakan) |
 | `CARA_PAKAI.txt` | Catatan singkat penggunaan lokal |
 | `LOKASI_DATASET.txt` | Tautan unduhan dataset + ringkasan cara meletakkan ke `data/yolo/` |
 
