@@ -1,4 +1,4 @@
-# Deteksi Kerusakan Jalan (YOLOv8)
+# Deteksi Kerusakan Jalan (YOLOv8n)
 
 Repository ini berisi **file yang dimaksudkan untuk GitHub**: kode Python, konfigurasi dataset (`data/road_damage.yaml`), dependensi, dan pengabaian Git (`.gitignore`). **Bukan** penyimpanan dataset gambar/label di GitHub; tautan unduhan diisi di **`LOKASI_DATASET.txt`**.
 
